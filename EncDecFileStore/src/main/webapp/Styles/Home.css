@@ -1,0 +1,323 @@
+@charset "ISO-8859-1";
+* { 
+	margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+:root{
+  /*Background Gradient*/
+  --color1-backgrnd-img: #000;
+  --color2-backgrnd-img: #111;
+  
+  --color-accent-light-gray: #eee;
+  --color-accent-dark-gray: #333;
+  /*var(--color-accent-active-border)*/
+  
+  --color-accent-active-border: lime;
+}
+body{
+  background-image: repeating-linear-gradient(
+    to bottom right, 
+    var(--color1-backgrnd-img) 0%, 
+    var(--color1-backgrnd-img) 1%, 
+    var(--color2-backgrnd-img) 4%, 
+    var(--color2-backgrnd-img) 5%, 
+    var(--color1-backgrnd-img) 8%); 
+  background-size: 500% 500%;
+  animation-name: back-animation;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-attachment: fixed;
+}
+@keyframes back-animation {
+  0% {background-position: 0% 0%;}  
+  
+  25% {background-position: 100% 0%;}
+  
+  50% {background-position: 100% 100%;}  
+  
+  75% {background-position: 0% 100%;}
+  
+  100% {background-position: 0% 0%;}
+}
+
+
+a {padding: 20px; display: block; text-decoration: none; color: black;}
+
+.navbar {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	margin: auto;
+	padding: 0;
+	background-color: var(--color-accent-light-gray);
+	border: 2px solid black;
+	z-index: 2;
+}
+.navbar:active {border: 2px solid var(--color-accent-active-border);}
+
+.bar {
+	display: flex;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	border-bottom: 2px solid black;
+	background-color: var(--color-accent-light-gray);
+}
+.bar:active {border-bottom: 1px solid var(--color-accent-active-border);}
+
+.navul {
+	margin: auto;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 55%;
+	text-align: center;
+}
+
+.navul a:hover {background-color: white; transition: 0.3s;}
+.navul a:focus {color: var(--color-accent-active-border); border: 1px solid var(--color-accent-active-border); background-color: #444; transition: 0.3s;}
+
+.barul {
+	margin: auto;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 100%;
+	text-align: center;
+	border: 1px solid transparent;
+}
+
+.barul a:hover {background-color: white; transition: 0.3s;}
+.barul a:focus {color: var(--color-accent-active-border); border: 1px solid var(--color-accent-active-border); background-color: var(--color-accent-dark-gray); transition: 0.3s;}
+
+.navli {
+	font-size: 20px;
+	display: block;
+	margin: auto;	
+}
+  
+#logo {
+	width: 45%;
+	text-align: center;
+	margin: 10px;
+}
+
+.firstelem {
+	display: block;
+	height: 63px;
+}
+
+.imgs {
+	display: inline;
+	text-align: center;
+	margin: auto;
+	width: 16px;
+	height: auto;
+}
+
+#site {
+	width: 75%;
+	text-align: center;
+	background-color: var(--color-accent-light-gray);
+	margin: auto;
+	padding: 25px 10px 25px;
+}
+
+#usrDet {
+	width: 75%;
+	text-align: center;
+	background-color: var(--color-accent-light-gray);
+	margin: auto;
+	padding: 25px 10px 25px;
+}
+
+.prodimg {
+	float: left;
+	width: auto;
+	height: 200px;
+	border: 1px solid black;
+	margin-right: 8px;
+}
+
+.proddiv {
+	width: 100%;
+	height: 225px;
+	padding: 5px;
+}
+
+.prodhead {
+	text-align: center;
+}
+
+.info {
+	display:block;
+	margin-bottom: 10px;
+}
+
+.pricetag {
+	position: absolute; 
+	left: 16.5%; 
+	width: 100px; 
+	font-size: 36px;
+	z-index: 0;
+}
+
+.prodtags {
+	max-width: 50%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+	word-wrap: wrap;
+}
+
+.prodtags a {
+	font-size: 16px;
+	padding: 7px;
+	border: 1px solid black;
+	background-color: lawngreen;
+	border-radius: 7px;
+}
+.prodtags a:active {
+	background-color: var(--color-accent-dark-gray);
+	color: var(--color-accent-active-border);
+	border: 2px solid var(--color-accent-active-border);
+}
+
+.prodtags p {
+	font-size: 16px;
+	padding: 7px;
+	margin: 1px 1px;
+}
+
+.formy {
+	width: 70%;
+	Margin: auto;
+	padding: 10px;
+	margin-top: 30px;
+}
+
+.formfield {
+	display: block;
+	padding: 5px;
+	margin: auto;
+	text-decoration: underline;
+	margin-top: 13px;
+	width: 80%;
+	font-size: 24px;
+	text-align: left;
+}
+
+.forminput {
+	width: 80%;
+	font-size: 20px;
+	border-radius: 7px;
+	border: 2px solid black;
+	margin:auto;
+	margin-bottom: 13px;
+	padding: 3px;
+	text-align: left;
+}
+
+.forminput:focus, .forminput:active {border: 2px solid var(--color-accent-active-border);}
+
+.formbutton {
+	font-size: 24px;
+	padding: 5px 20px;
+	background-color: midnightblue;
+	color: white;
+	border: 2px solid black;
+	border-radius: 7px;
+}
+
+.formbutton:active {
+	background-color: var(--color-accent-dark-gray);
+	color: var(--color-accent-active-border);
+	border: 2px solid var(--color-accent-active-border);
+	transition: 0.3s;
+}
+
+#usrAdd {
+	font-size: 32px;
+	display: none;
+	width:100%;
+	background-color: Azure;
+	text-align: center;
+	color: seagreen;
+}
+
+#loginopt {
+	z-index: 2;
+	background-color: var(--color-accent-light-gray);
+	margin:auto 0px;
+	padding: 0px;
+	display: none;
+	width: 18.33%;
+	position: fixed;
+	right: 0px;
+	top: 64px;
+}
+#loginopt a {
+	font-size: 20px;
+	margin: 0px auto;
+	padding: 6px;
+	font-size: 14px;
+	border: 2px solid black;
+	border-top: 0px solid transparent;
+}
+#loginopt a:hover {display: block; background-color: white; transition: 0.3s;}
+#loginopt a:active {
+	display: block;
+	background-color: var(--color-accent-dark-gray); 
+	color: var(--color-accent-active-border); 
+	border: 1px solid var(--color-accent-active-border);
+	transition: 0.3s;
+}
+
+.datetime {
+	padding: 5px;
+	max-width: 100%; 
+	font-size: 24px;
+	font-weight: 800;
+	background-color: black;
+	color: white;
+}
+
+table {
+	width: 66.67%;
+	margin: auto;
+	background-color: mistyrose;
+	border-collapse: collapse;
+}
+td,tr {
+	padding: 5px;
+	font-size: 24px;
+	margin: auto;
+	text-align: left;
+	border: 2px solid royalblue;
+}
+
+td:nth-child(2) {text-align: right;}
+
+#loginopt:hover {display: block;}
+#usrName2:hover+#loginopt {display: block; transition: 2s;}
+#usrName2:focus+#loginopt {display: block; transition: 2s;}
+
+#usrName1 {display: block;}
+#usrName2 {display: none;}
+
+.footer {
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+	background-color: var(--color-accent-light-gray);
+	border-collapse: collapse;
+}
+
+.footer a{
+	border: 1px solid black;
+}

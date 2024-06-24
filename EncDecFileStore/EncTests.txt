@@ -1,0 +1,22 @@
+128bit AES CBC
+Encode operation took:-11.256
+Decode operation took:-14.175
+
+
+128bit AES EBC
+Encode operation took:-10.956
+Decode operation took:-12.206
+
+
+256bit AES CBC
+Encode operation took:-11.774
+Decode operation took:-12.781
+
+
+256bit AES EBC
+Encode operation took:-11.239
+Decode operation took:-12.316
+
+
+2048-bit RSA
+Encode operation took:-217175
